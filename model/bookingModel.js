@@ -1,9 +1,8 @@
 class Booking {
-    constructor(id, hotel, room, numGuets, roomCategory, entryDate, egressDate, guestName, guestEmail, guestPhone, paymentStatus, timeStamp) {
+    constructor(id, hotel, numGuests, roomCategory, entryDate, egressDate, guestName, guestEmail, guestPhone, paymentStatus, timeStamp) {
         this.id = id;
         this.hotel = hotel;
-        this.room = room;
-        this.numGuets = numGuets;
+        this.numGuests = numGuests;
         this.roomCategory = roomCategory;
         this.entryDate = entryDate;
         this.egressDate = egressDate;
