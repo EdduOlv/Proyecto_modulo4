@@ -60,3 +60,49 @@ exports.getBooking = async (req, res) =>{
         })
     }
 }
+
+exports.getBookingById = async (req, res) =>{
+    const {bookId} = req.params.id
+    const booking = Bookings.find(booking.id === bookId)
+
+    if (!booking) {
+        return res.status(404).json({ msg: 'No se encontraro ninguna reserva' });
+    }
+
+    return res.json({
+        msg: "Reserva encontrada con exito",
+        data: booking
+    })
+}
+
+exports.updateBookingById= async (req, res) =>{
+    const {bookId} = req.params.id
+    const bookingIndex = Bookings.findIndex(booking => booking.id === bookId)
+
+    if (bookingIndex === -1) {
+        return res.status(404).json({ msg: 'No se encontraro ninguna reserva' });
+    }
+
+    
+    Bookings[bookingIndex] = { ...Bookings[bookingIndex], ...req.body}
+
+    return res.json({
+        msg: "Reserva actualizada con exito",
+        data: Bookings[bookingIndex]
+    })
+}
+
+exports.deleteBookingById= async (req, res) =>{
+    const {bookId} = req.params.id
+    const bookingIndex = Bookings.findIndex(booking => booking.id === bookId)
+
+    if (bookingIndex === -1) {
+        return res.status(404).json({ msg: 'No se encontraro ninguna reserva' });
+    }
+
+    Bookings.splice(bookingIndex, 1)
+
+    return res.json({
+        msg: "Reserva eliminada con exito",
+    })
+}
