@@ -39,7 +39,7 @@ Proyecto_Modulo_4
 ## Endpoints 
 
 |Descripción del Endpoint|	Método|	Endpoint|	Información del endpoint|
-|-----------------------|----------|------------|---------|
+|-----------------------|----------|----------|-------------|
 |Crear reserva	| POST| 	/api/reservas| Este endpoint verifica previamente si existe algún otro usuario con el mismo número o correo, además asegura que las fechas ingresadas sean validas Ej: si están de entrada y salida están revés y si el número de huéspedes corresponde con el tipo de habitación.|
 |Obtener la lista de reservas|	GET|	/api/reservas o /api/reservas?consulta_fecha=CONSULTA_FECHA| Este endponit retorna todas las reservas realizadas, y de forma opcional se puede ingresar además una fecha de consulta con el formato "DD-MM-YYYY" para hacer una búsqueda de todas las reservas con fecha de ingreso definida en la query.|
 |Obtener información de una reserva específica	|GET|	/api/reservas/:id| Este endponit requiere ingresar como parámetro el id de una reserva para hacer una búsqueda y retorna en la respuesta toda la información de la misma.|
