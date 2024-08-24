@@ -66,7 +66,7 @@ PORT=3001
   "hotel": "Paraiso",
   "numGuests": "4",
   "roomCategory": "doble",
-  "entryDate": "10-08-20242",
+  "entryDate": "10-08-2024",
   "egressDate": "22-08-2024",
   "guestName": "Nombre Huesped",
   "guestEmail": "husped@gmail.com",
